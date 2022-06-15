@@ -3,12 +3,13 @@ import { formatNumTweets, formatNumFollowers } from "../../utils/format"
 import "./UserProfile.css"
 
 export default function UserProfile({ userProfile }) {
+  console.log()
   return (
     <div className="col user-profile">
       <div className="card">
         <div className="card-bg" />
-        <CardContent />
-        <CardFooter />
+        <CardContent name={{userProfile}.userProfile.name} handle={{userProfile}.userProfile.handle}/>
+        <CardFooter numTweets={{userProfile}.userProfile.numTweets} numFollowers={{userProfile}.userProfile.numFollowers}/>
       </div>
     </div>
   )
